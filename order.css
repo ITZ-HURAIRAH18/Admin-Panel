@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f7fc;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #2C3E50;
+    color: white;
+    width: 200px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.log{
+    border-radius: 50%;
+     width:130px;
+    height: 130px;
+    cursor: pointer;
+    
+}
+
+.hom{
+    margin-top: 100px;
+}
+/* li{
+    justify-content: center;
+} */
+a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #34495E;
+    padding-left: 30px;
+}
+
+.sidebar li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar li span {
+    font-size: 16px;
+}
+.lof{
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* .sidebar .logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+} */
+
+/* .sidebar .logo:hover {
+    transform: rotate(-10deg);
+} */
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+button.view-all {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.view-all:hover {
+    background-color: #0056b3;
+}
+
+.filters {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filters button {
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #bbb;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+.paid {
+    color: green;
+    font-weight: bold;
+}
+
+.pending {
+    color: orange;
+    font-weight: bold;
+}
+
+.abandoned {
+    color: grey;
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+    font-weight: bold;
+}
+
+.shipped {
+    color: blue;
+    font-weight: bold;
+}
+
+.processed {
+    color: purple;
+    font-weight: bold;
+}
+
+.not-processed {
+    color: red;
+    font-weight: bold;
+}
+
+.refunded {
+    color: red;
+    font-weight: bold;
+}

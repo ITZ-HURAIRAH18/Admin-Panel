@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="lof">My Dashboard</div>
+            <ul>
+                <img class="log" src="https://i.pinimg.com/736x/60/ad/c1/60adc169448e802d1d00ef732cee133c.jpg" alt="" srcset="">
+                
+                <li style="margin-top: 60px;" ><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="order.html"><i class="fas fa-box"></i><span>Orders</span></a></li>
+                <li><a href="product.html"><i class="fas fa-cogs"></i><span>Products</span></a></li>
+                <li><a href="Shopping.html"><i class="fas fa-users"></i><span>Shopping</span></a></li>
+                <li><a href="add.html"><i class="fas fa-cogs"></i><span>Add item</span></a></li>
+                
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main">
+            <header>
+                <h1>Products</h1>
+                <!-- <button class="create-button">Create Products</button> -->
+            </header>
+
+            <!-- Filters and Search -->
+            <div class="filters">
+                <button style="background-color: #0056b3; "  class="al">All Products</button>
+                <!-- <button>Unpublish</button> -->
+                <input type="text" placeholder="Search products" id="searchInput" />
+                <button style="background-color: #0056b3; " id="searchButton">Search</button> <!-- Added Search Button -->
+            </div>
+
+            <!-- Products Table -->
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Brand</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-product-id="1">
+                        <td><img src="https://via.placeholder.com/40" alt="Product 1"></td>
+                        <td class="product-name">Ahmed</td>
+                        <td class="product-type">Shoes</td>
+                        <td class="product-inventory">3</td>
+                        <td><button class="edit ">Edit</button><button class="delete">Delete</button></td>
+                    </tr>
+                    <tr data-product-id="2">
+                        <td><img src="https://via.placeholder.com/40" alt="Product 2"></td>
+                        <td class="product-name">Super Extreme Nike Sports</td>
+                        <td class="product-type">Shoes</td>
+                        <td class="product-inventory">5</td>
+                        <td><button class="edit">Edit</button><button class="delete">Delete</button></td>
+                    </tr>
+                    <tr data-product-id="3">
+                        <td><img src="https://via.placeholder.com/40" alt="Product 3"></td>
+                        <td class="product-name">Super Extreme Nike Sports</td>
+                        <td class="product-type">TV</td>
+                        <td class="product-inventory">10</td>
+                        <td><button class="edit">Edit</button><button class="delete">Delete</button></td>
+                    </tr>
+                    <tr data-product-id="4">
+                        <td><img src="https://via.placeholder.com/40" alt="Product 4"></td>
+                        <td class="product-name">Super Extreme Nike Sports</td>
+                        <td class="product-type">T-Shirt</td>
+                        <td class="product-inventory">7</td>
+                        <td><button class="edit">Edit</button><button class="delete">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Edit Modal -->
+            <div id="editModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Edit Product</h2>
+                    <form id="editForm">
+                        <label for="editProductName">Product Name:</label>
+                        <input type="text" id="editProductName" required>
+
+                        <label for="editProductType">Brand:</label>
+                        <input type="text" id="editProductType" required>
+
+                        <label for="editProductInventory">Price:</label>
+                        <input type="number" id="editProductInventory" required>
+
+                        <button type="submit">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <!-- <div class="pagination">
+                <button>&lt;</button>
+                <span>Page 1 of 1</span>
+                <button>&gt;</button>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- JavaScript for search functionality -->
+    <script src="product.js"></script>
+</body>
+</html>
